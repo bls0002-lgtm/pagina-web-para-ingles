@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borja Lara | ASIR Portfolio</title>
+    <title>Borja Lara | ASIR & Rider</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Racing Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Preloader -->
+    <!-- Engine Preloader -->
     <div id="preloader">
         <div class="loader-content">
-            <i class="fa-solid fa-server fa-bounce" style="font-size: 4rem; color: var(--primary-color);"></i>
-            <h2 style="margin-top: 1rem; color: #fff;">Booting System...</h2>
+            <i class="fa-solid fa-motorcycle fa-fade" style="font-size: 5rem; color: var(--primary-color);"></i>
+            <h2 class="racing-text">STARTING ENGINE...</h2>
             <div class="loading-bar"><div class="loading-progress"></div></div>
         </div>
     </div>
@@ -27,44 +28,43 @@
     <div class="floating-player custom-glass" id="music-player">
         <div class="player-icon"><i class="fa-brands fa-spotify"></i></div>
         <div class="player-info">
-            <span class="song">My Driving Playlist</span>
-            <span class="artist">Spotify</span>
+            <span class="song">Track Day Hits</span>
+            <span class="artist">My Playlist</span>
         </div>
         <a href="https://open.spotify.com/playlist/37i9dQZF1DX4wta20PHgwo" target="_blank" class="play-btn nav-item"><i class="fa-solid fa-play"></i></a>
     </div>
 
-    <div id="particles-background"></div>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    <!-- Asphalt Background Pattern -->
+    <div class="asphalt-bg"></div>
 
     <nav class="navbar">
-        <div class="logo"><i class="fa-solid fa-server"></i> Borja.Dev</div>
+        <div class="logo racing-text"><i class="fa-solid fa-helmet-safety"></i> BORJA.DEV</div>
         <ul class="nav-links">
-            <li><a href="#personal" class="nav-item"><i class="fa-solid fa-user"></i> About Me</a></li>
-            <li><a href="#skills" class="nav-item"><i class="fa-solid fa-code-branch"></i> Skills</a></li>
-            <li><a href="#hobbies" class="nav-item"><i class="fa-solid fa-motorcycle"></i> Hobbies</a></li>
-            <li><a href="#routine" class="nav-item"><i class="fa-solid fa-clock"></i> Routine</a></li>
-            <li><a href="#goals" class="nav-item"><i class="fa-solid fa-rocket"></i> Goals</a></li>
+            <li><a href="#personal" class="nav-item"><i class="fa-solid fa-user"></i> Me</a></li>
+            <li><a href="#skills" class="nav-item"><i class="fa-solid fa-wrench"></i> Skills</a></li>
+            <li><a href="#hobbies" class="nav-item"><i class="fa-solid fa-motorcycle"></i> Passion</a></li>
+            <li><a href="#routine" class="nav-item"><i class="fa-solid fa-stopwatch"></i> Routine</a></li>
+            <li><a href="#goals" class="nav-item"><i class="fa-solid fa-flag-checkered"></i> Goals</a></li>
         </ul>
-        <button id="theme-toggle" class="theme-btn nav-item"><i class="fa-solid fa-sun" id="theme-icon"></i></button>
         <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
     </nav>
 
     <header class="hero" id="personal">
-        <div class="glass-panel hero-content" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
+        <div class="hero-content" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <div class="profile-pic-container">
                 <img src="https://images.unsplash.com/photo-1544477051-78c66e2c3e1e?auto=format&fit=crop&q=80&w=300&h=300" alt="My Profile" class="profile-pic">
             </div>
-            <!-- Glitch Text Effect -->
-            <h1 class="glitch" data-text="Borja Lara Sánchez">Borja Lara Sánchez</h1>
+            
+            <h1 class="racing-title">BORJA LARA</h1>
             <div class="typing-container">
                 <span id="typing-text"></span><span class="cursor-blink">|</span>
             </div>
+            
             <div class="intro-box custom-glass">
                 <p class="intro-text">
-                    Hello everyone! My name is Borja and I am 18 years old. I live in Spain and I am currently studying a Vocational Training Degree in <strong>Network and Systems Administration (ASIR)</strong>. 
+                    Hey! I'm Borja, an 18-year-old from Spain. I'm currently studying Network and Systems Administration (ASIR). But when I'm not dealing with servers and cables, I'm out riding.
                     <br><br>
-                    I consider myself an active person. I don't like sitting in front of a screen to play games all day. I prefer action, engines, and spending quality time with the people I love.
+                    I can't stand sitting at home playing video games all day. I need real action, roaring engines, asphalt, and spending good time with my girlfriend, my stepson, and my friends.
                 </p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/motogp/" target="_blank" class="social-btn nav-item"><i class="fa-brands fa-instagram"></i></a>
@@ -72,30 +72,29 @@
                     <a href="https://open.spotify.com/playlist/37i9dQZF1DX4wta20PHgwo" target="_blank" class="social-btn nav-item"><i class="fa-brands fa-spotify"></i></a>
                 </div>
             </div>
-            <a href="#skills" class="scroll-down nav-item"><i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#skills" class="scroll-down nav-item"><i class="fa-solid fa-angles-down"></i></a>
         </div>
     </header>
 
     <section id="skills" class="section">
         <div class="section-header">
-            <h2 class="section-title"><i class="fa-solid fa-microchip"></i> My Tech Skills</h2>
-            <p class="section-desc">What I am learning in ASIR right now.</p>
+            <h2 class="section-title racing-text"><i class="fa-solid fa-toolbox"></i> MY TOOLBOX (ASIR)</h2>
         </div>
         <div class="skills-container glass-panel" data-tilt data-tilt-max="3">
             <div class="skill-box">
-                <div class="skill-info"><span><i class="fa-brands fa-windows"></i> Windows Server</span><span>85%</span></div>
+                <div class="skill-info"><span><i class="fa-brands fa-windows"></i> Windows Server</span><span class="racing-text">85%</span></div>
                 <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
             </div>
             <div class="skill-box">
-                <div class="skill-info"><span><i class="fa-brands fa-linux"></i> Linux Administration</span><span>75%</span></div>
+                <div class="skill-info"><span><i class="fa-brands fa-linux"></i> Linux OS</span><span class="racing-text">75%</span></div>
                 <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
             </div>
             <div class="skill-box">
-                <div class="skill-info"><span><i class="fa-solid fa-network-wired"></i> Computer Networks</span><span>80%</span></div>
+                <div class="skill-info"><span><i class="fa-solid fa-network-wired"></i> Networks</span><span class="racing-text">80%</span></div>
                 <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
             </div>
             <div class="skill-box">
-                <div class="skill-info"><span><i class="fa-solid fa-memory"></i> Hardware & Assembly</span><span>95%</span></div>
+                <div class="skill-info"><span><i class="fa-solid fa-gears"></i> Hardware Setup</span><span class="racing-text">95%</span></div>
                 <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
             </div>
         </div>
@@ -103,7 +102,7 @@
 
     <section id="hobbies" class="section dark-section">
         <div class="section-header">
-            <h2 class="section-title"><i class="fa-solid fa-heart"></i> Likes & Dislikes</h2>
+            <h2 class="section-title racing-text"><i class="fa-solid fa-fire-flame-curved"></i> REAL PASSIONS</h2>
         </div>
         
         <div class="media-grid">
@@ -116,75 +115,66 @@
                     </div>
                     <div class="overlay"><i class="fa-solid fa-motorcycle"></i></div>
                 </div>
-                <h3><i class="fa-solid fa-flag-checkered"></i> Motorcycles</h3>
-                <p>My biggest passion in life is motorcycles. I really love speed and adrenaline. When I have free time, I go to the racing circuit.</p>
-                <button class="btn btn-glow nav-item" id="play-moto-btn"><i class="fa-solid fa-volume-high"></i> Engine Sound</button>
+                <h3 class="racing-text"><i class="fa-solid fa-flag-checkered"></i> MOTORCYCLES</h3>
+                <p>My absolute passion. Speed, adrenaline, and pushing the limits on the track. Nothing beats the feeling of a track day.</p>
+                <button class="btn btn-racing nav-item" id="play-moto-btn"><i class="fa-solid fa-volume-high"></i> Rev the Engine</button>
             </div>
             
             <div class="media-card" data-tilt data-tilt-max="10">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1511632765486-a01c80cb8704?auto=format&fit=crop&w=600&h=400" alt="Family and Friends">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01c80cb8704?auto=format&fit=crop&w=600&h=400" alt="Family">
                     <div class="overlay"><i class="fa-solid fa-users"></i></div>
                 </div>
-                <h3><i class="fa-solid fa-user-group"></i> Family & Friends</h3>
-                <p>I enjoy spending my free time outside. I love doing activities with my girlfriend and my stepson, and going on routes with friends.</p>
+                <h3 class="racing-text"><i class="fa-solid fa-user-group"></i> CREW & FAMILY</h3>
+                <p>I love spending time outside. Doing activities with my girlfriend, my stepson, and going on mountain routes with my friends.</p>
             </div>
 
             <div class="media-card" data-tilt data-tilt-max="10">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=600&h=400" alt="No Videogames" style="filter: grayscale(100%);">
-                    <div class="overlay"><i class="fa-solid fa-thumbs-down"></i></div>
+                    <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=600&h=400" alt="No Videogames" style="filter: grayscale(100%) contrast(1.2);">
+                    <div class="overlay"><i class="fa-solid fa-ban"></i></div>
                 </div>
-                <h3><i class="fa-solid fa-gamepad"></i> Dislikes: Video Games</h3>
-                <p>Unlike many people my age, I absolutely hate video games. I don't like staying at home staring at a TV. Real life is much better.</p>
+                <h3 class="racing-text"><i class="fa-solid fa-gamepad"></i> NO VIRTUAL GAMES</h3>
+                <p>I hate being locked in a room playing video games. I want to feel the wind and live real experiences, not virtual ones.</p>
             </div>
         </div>
     </section>
 
     <section id="routine" class="section">
         <div class="section-header">
-            <h2 class="section-title"><i class="fa-solid fa-calendar-day"></i> My Routine & Habits</h2>
+            <h2 class="section-title racing-text"><i class="fa-solid fa-stopwatch"></i> DAILY LAPS (ROUTINE)</h2>
         </div>
         
         <div class="routine-container">
             <div class="routine-card custom-glass timeline-card" data-tilt data-tilt-max="5">
-                <h3><i class="fa-solid fa-sun"></i> Typical Weekday</h3>
+                <h3 class="racing-text"><i class="fa-solid fa-sun"></i> WEEKDAY RACE</h3>
                 <ul class="timeline">
-                    <li><span class="time">06:00 AM</span><p>I wake up very early to get ready and go to the high school.</p></li>
-                    <li><span class="time">03:00 PM</span><p>I finish my ASIR classes and go back home to eat quickly.</p></li>
-                    <li><span class="time">04:00 PM</span><p>I start working. My job takes most of my afternoon and evening.</p></li>
-                    <li><span class="time">10:00 PM</span><p>I finish work and arrive home at 11:00 PM to take a shower and sleep.</p></li>
+                    <li><span class="time">06:00 AM</span><p>Wake up early for ASIR classes.</p></li>
+                    <li><span class="time">03:00 PM</span><p>Finish high school and eat quickly.</p></li>
+                    <li><span class="time">04:00 PM</span><p>Start working my afternoon job.</p></li>
+                    <li><span class="time">10:00 PM</span><p>Finish work. Arrive home around 11:00 PM, shower, and finally sleep.</p></li>
                 </ul>
             </div>
 
             <div class="routine-card custom-glass" data-tilt data-tilt-max="5">
-                <div class="card-icon"><i class="fa-solid fa-mug-hot"></i></div>
-                <h3>My Weekend Routine</h3>
-                <p>Saturdays and Sundays are my days to disconnect. I spend the whole day with my family or riding my motorcycle on the road.</p>
-            </div>
-
-            <div class="routine-card custom-glass habits-card" data-tilt data-tilt-max="5">
-                <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
-                <h3>My Habits</h3>
-                <ul>
-                    <li><span class="habit-badge start"><i class="fa-solid fa-play"></i> Start</span> <strong>Eating healthier:</strong> I want to start a better diet.</li>
-                    <li><span class="habit-badge stop"><i class="fa-solid fa-stop"></i> Stop</span> <strong>Sleeping late:</strong> I want to stop sleeping only 5 hours.</li>
-                </ul>
+                <div class="card-icon"><i class="fa-solid fa-road"></i></div>
+                <h3 class="racing-text">WEEKEND PIT STOP</h3>
+                <p>Saturdays and Sundays are my days to disconnect from the stress. I spend the day with my family or riding my bike on the road to clear my mind.</p>
             </div>
         </div>
     </section>
 
     <section id="goals" class="section dark-section">
         <div class="section-header">
-            <h2 class="section-title"><i class="fa-solid fa-bullseye"></i> Professional Goals</h2>
+            <h2 class="section-title racing-text"><i class="fa-solid fa-trophy"></i> THE FINISH LINE (GOALS)</h2>
         </div>
-        <div class="goals-content glass-panel animated-border" data-tilt data-tilt-max="2">
+        <div class="goals-content glass-panel" data-tilt data-tilt-max="2" style="border-left: 5px solid var(--primary-color);">
             <div class="goal-highlight">
-                <i class="fa-solid fa-laptop-house"></i>
+                <i class="fa-solid fa-house-laptop"></i>
                 <div class="goal-text">
-                    <h3>My Dream Job</h3>
-                    <p>When I finish my ASIR degree, my main professional goal is to find a job as a <strong>Systems Administrator</strong> or a <strong>Cloud Engineer</strong>. I would love to work for a modern tech company that allows me to <strong>telework (work from home)</strong>.</p>
-                    <p>Working remotely is my dream because it would allow me to be comfortable, manage my own time, and live in my own big house with a huge garage filled with motorcycles!</p>
+                    <h3 class="racing-text">SYSTEMS ADMINISTRATOR</h3>
+                    <p>After finishing ASIR, my main goal is to work as a <strong>Systems Administrator</strong> or <strong>Cloud Engineer</strong> for a big company that allows me to <strong>telework</strong>.</p>
+                    <p>Working from home means I can live in a big house with a huge garage. My ultimate dream is to fill that garage with all the motorcycles I've ever wanted!</p>
                 </div>
             </div>
         </div>
@@ -192,24 +182,22 @@
 
     <section id="english" class="section">
         <div class="section-header">
-            <h2 class="section-title"><i class="fa-solid fa-earth-americas"></i> My Experience with English</h2>
+            <h2 class="section-title racing-text"><i class="fa-solid fa-earth-europe"></i> WHY ENGLISH?</h2>
         </div>
         <div class="english-content glass-panel" data-tilt data-tilt-max="2">
             <p class="quote">
-                <i class="fa-solid fa-quote-left"></i> 
-                For my professional career, English is essential. In the IT sector, 90% of the documentation, manuals, and software are written in English. If I want to be a good Systems Administrator and work remotely for big companies, I need to improve my English skills.
-                <i class="fa-solid fa-quote-right"></i>
+                <i class="fa-solid fa-quote-left" style="color: var(--primary-color);"></i> 
+                English is absolutely necessary. In the IT world, all the manuals, servers, and software are in English. If I want to be a top SysAdmin and work remotely, I need it. Plus, it helps a lot when watching international motorcycle racing broadcasts.
+                <i class="fa-solid fa-quote-right" style="color: var(--primary-color);"></i>
             </p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Borja Lara Sánchez. Developed for ASIR.</p>
+        <p>&copy; 2024 Borja Lara. ASIR Portfolio.</p>
         <a href="#personal" class="back-to-top nav-item"><i class="fa-solid fa-arrow-up"></i></a>
     </footer>
 
-    <!-- Scripts -->
-    <!-- Vanilla Tilt for 3D card effects -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
     <script src="script.js"></script>
 </body>
