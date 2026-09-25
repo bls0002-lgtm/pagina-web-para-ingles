@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borja Lara | Portfolio</title>
+    <title>Borja Lara | ASIR Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Sound Effects -->
+    <audio id="hoverSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" preload="auto"></audio>
+    <audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3" preload="auto"></audio>
+    <audio id="motoSound" src="https://assets.mixkit.co/active_storage/sfx/1545/1545-preview.mp3" preload="auto"></audio>
+
     <div id="particles-background"></div>
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
@@ -16,12 +21,18 @@
     <nav class="navbar">
         <div class="logo"><i class="fa-solid fa-server"></i> Borja.Dev</div>
         <ul class="nav-links">
-            <li><a href="#personal"><i class="fa-solid fa-user"></i> About Me</a></li>
-            <li><a href="#hobbies"><i class="fa-solid fa-motorcycle"></i> Hobbies</a></li>
-            <li><a href="#routine"><i class="fa-solid fa-clock"></i> Routine</a></li>
-            <li><a href="#goals"><i class="fa-solid fa-rocket"></i> Goals</a></li>
-            <li><a href="#english"><i class="fa-solid fa-language"></i> English</a></li>
+            <li><a href="#personal" class="nav-item"><i class="fa-solid fa-user"></i> About Me</a></li>
+            <li><a href="#skills" class="nav-item"><i class="fa-solid fa-code-branch"></i> Skills</a></li>
+            <li><a href="#hobbies" class="nav-item"><i class="fa-solid fa-motorcycle"></i> Hobbies</a></li>
+            <li><a href="#routine" class="nav-item"><i class="fa-solid fa-clock"></i> Routine</a></li>
+            <li><a href="#goals" class="nav-item"><i class="fa-solid fa-rocket"></i> Goals</a></li>
         </ul>
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-btn nav-item">
+            <i class="fa-solid fa-sun" id="theme-icon"></i>
+        </button>
+        <!-- Mobile Menu Icon -->
+        <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
     </nav>
 
     <header class="hero" id="personal">
@@ -33,79 +44,108 @@
             <div class="typing-container">
                 <span id="typing-text"></span><span class="cursor-blink">|</span>
             </div>
-            <div class="intro-box">
+            <div class="intro-box custom-glass">
                 <p class="intro-text">
                     Hello everyone! My name is Borja and I am 18 years old. I live in Spain and I am currently studying a Vocational Training Degree in <strong>Network and Systems Administration (ASIR)</strong>. 
                     <br><br>
                     I consider myself an active person. I don't like sitting in front of a screen to play games all day. I prefer action, engines, and spending quality time with the people I love.
                 </p>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/motogp/" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://github.com/bls0002-lgtm" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://open.spotify.com/playlist/37i9dQZF1DX4wta20PHgwo" target="_blank" class="social-btn"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="https://www.instagram.com/motogp/" target="_blank" class="social-btn nav-item"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/bls0002-lgtm" target="_blank" class="social-btn nav-item"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://open.spotify.com/playlist/37i9dQZF1DX4wta20PHgwo" target="_blank" class="social-btn nav-item"><i class="fa-brands fa-spotify"></i></a>
                 </div>
             </div>
-            <a href="#hobbies" class="scroll-down"><i class="fa-solid fa-chevron-down"></i></a>
+            <a href="#skills" class="scroll-down nav-item"><i class="fa-solid fa-chevron-down"></i></a>
         </div>
     </header>
 
-    <section id="hobbies" class="section">
+    <!-- NEW SECTION: Skills -->
+    <section id="skills" class="section">
+        <div class="section-header">
+            <h2 class="section-title"><i class="fa-solid fa-microchip"></i> My Tech Skills</h2>
+            <p class="section-desc">What I am learning in ASIR right now.</p>
+        </div>
+        <div class="skills-container glass-panel">
+            <div class="skill-box">
+                <div class="skill-info">
+                    <span><i class="fa-brands fa-windows"></i> Windows Server</span>
+                    <span>85%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <span><i class="fa-brands fa-linux"></i> Linux Administration</span>
+                    <span>75%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <span><i class="fa-solid fa-network-wired"></i> Computer Networks</span>
+                    <span>80%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+            </div>
+            <div class="skill-box">
+                <div class="skill-info">
+                    <span><i class="fa-solid fa-memory"></i> Hardware & Assembly</span>
+                    <span>95%</span>
+                </div>
+                <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hobbies" class="section dark-section">
         <div class="section-header">
             <h2 class="section-title"><i class="fa-solid fa-heart"></i> Likes & Dislikes</h2>
             <p class="section-desc">What makes me tick when I'm not studying.</p>
         </div>
         
         <div class="media-grid">
-            <!-- Hobby 1: Motos con vídeo real -->
-            <div class="media-card" data-tilt>
-                <div class="card-image-wrapper video-wrapper">
-                    <iframe width="100%" height="220" src="https://www.youtube.com/embed/5T8k_KxYIcw?autoplay=0&mute=1" title="MotoGP Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Hobby 1: Motos con Galería Carrusel -->
+            <div class="media-card" id="moto-card">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&h=400" alt="Moto 1">
+                        <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=600&h=400" alt="Moto 2">
+                        <img src="https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?auto=format&fit=crop&w=600&h=400" alt="Moto 3">
+                    </div>
+                    <div class="overlay"><i class="fa-solid fa-motorcycle"></i></div>
                 </div>
                 <h3><i class="fa-solid fa-flag-checkered"></i> Motorcycles & Track Days</h3>
-                <p>My biggest passion in life is motorcycles. I really love speed and adrenaline. When I have free time, I go to the racing circuit to ride my bike. It is the best feeling in the world.</p>
-                <a href="https://www.motogp.com/" class="btn btn-glow" target="_blank"><i class="fa-solid fa-link"></i> Official MotoGP Website</a>
+                <p>My biggest passion in life is motorcycles. I really love speed and adrenaline. When I have free time, I go to the racing circuit to ride my bike.</p>
+                <button class="btn btn-glow nav-item" id="play-moto-btn"><i class="fa-solid fa-volume-high"></i> Engine Sound</button>
             </div>
             
-            <!-- Hobby 2: Amigos y familia -->
-            <div class="media-card" data-tilt>
+            <div class="media-card">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1511632765486-a01c80cb8704?auto=format&fit=crop&q=80&w=600&h=400" alt="Family and Friends">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01c80cb8704?auto=format&fit=crop&w=600&h=400" alt="Family and Friends">
                     <div class="overlay"><i class="fa-solid fa-users"></i></div>
                 </div>
                 <h3><i class="fa-solid fa-user-group"></i> Family & Friends</h3>
-                <p>I enjoy spending my free time outside. I love doing activities with my girlfriend and my stepson. Also, going on motorcycle routes through the mountains with my friends is my perfect weekend plan.</p>
+                <p>I enjoy spending my free time outside. I love doing activities with my girlfriend and my stepson, and going on routes through the mountains with my friends.</p>
             </div>
 
-            <!-- Dislike 1: Videojuegos -->
-            <div class="media-card" data-tilt>
+            <div class="media-card">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&q=80&w=600&h=400" alt="No Videogames" style="filter: grayscale(100%);">
+                    <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=600&h=400" alt="No Videogames" style="filter: grayscale(100%);">
                     <div class="overlay"><i class="fa-solid fa-thumbs-down"></i></div>
                 </div>
                 <h3><i class="fa-solid fa-gamepad"></i> Dislikes: Video Games</h3>
-                <p>Unlike many people my age, I absolutely hate video games. I don't like staying at home staring at a TV. I think real life and real experiences are much more exciting than virtual ones.</p>
-            </div>
-            
-            <!-- Hobby 3: Tech -->
-            <div class="media-card" data-tilt>
-                <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=600&h=400" alt="Cybersecurity">
-                    <div class="overlay"><i class="fa-solid fa-microchip"></i></div>
-                </div>
-                <h3><i class="fa-solid fa-network-wired"></i> IT & Systems (ASIR)</h3>
-                <p>Even though I don't like gaming, I do like technology and computers. I am very interested in how networks work, how to set up servers, and cybersecurity. That's why I chose to study ASIR.</p>
+                <p>Unlike many people my age, I absolutely hate video games. I don't like staying at home staring at a TV. Real life experiences are much better.</p>
             </div>
         </div>
     </section>
 
-    <section id="routine" class="section dark-section">
+    <section id="routine" class="section">
         <div class="section-header">
             <h2 class="section-title"><i class="fa-solid fa-calendar-day"></i> My Routine & Habits</h2>
-            <p class="section-desc">A typical week in my busy life.</p>
         </div>
         
         <div class="routine-container">
-            <!-- Timeline style for weekday -->
             <div class="routine-card custom-glass timeline-card">
                 <h3><i class="fa-solid fa-sun"></i> Typical Weekday</h3>
                 <ul class="timeline">
@@ -123,7 +163,7 @@
                     </li>
                     <li>
                         <span class="time">10:00 PM</span>
-                        <p>I finish work and go home. I usually arrive at 11:00 PM, take a shower, and finally go to bed around midnight.</p>
+                        <p>I finish work and arrive home at 11:00 PM to take a shower and sleep.</p>
                     </li>
                 </ul>
             </div>
@@ -131,16 +171,16 @@
             <div class="routine-card custom-glass">
                 <div class="card-icon"><i class="fa-solid fa-mug-hot"></i></div>
                 <h3>My Weekend Routine</h3>
-                <p>Saturdays and Sundays are my days to disconnect. I wake up late because I am tired from the week. I spend the whole day with my girlfriend, my stepson, or riding my motorcycle on the road with my friends. I try not to think about work or studies.</p>
+                <p>Saturdays and Sundays are my days to disconnect. I wake up late because I am tired from the week. I spend the whole day with my girlfriend, my stepson, or riding my motorcycle on the road with my friends.</p>
             </div>
 
             <div class="routine-card custom-glass habits-card">
                 <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
                 <h3>My Habits</h3>
                 <ul>
-                    <li><span class="habit-badge start"><i class="fa-solid fa-play"></i> Start</span> <strong>Eating healthier:</strong> I want to start a better diet because I usually eat fast due to my schedule.</li>
-                    <li><span class="habit-badge stop"><i class="fa-solid fa-stop"></i> Stop</span> <strong>Sleeping late:</strong> I want to stop sleeping only 5 hours because I feel very tired during the day.</li>
-                    <li><span class="habit-badge keep"><i class="fa-solid fa-pause"></i> Keep</span> <strong>Riding bikes:</strong> I want to keep going to the circuit because it helps me relieve stress.</li>
+                    <li><span class="habit-badge start"><i class="fa-solid fa-play"></i> Start</span> <strong>Eating healthier:</strong> I want to start a better diet.</li>
+                    <li><span class="habit-badge stop"><i class="fa-solid fa-stop"></i> Stop</span> <strong>Sleeping late:</strong> I want to stop sleeping only 5 hours.</li>
+                    <li><span class="habit-badge keep"><i class="fa-solid fa-pause"></i> Keep</span> <strong>Riding bikes:</strong> I want to keep going to the circuit.</li>
                 </ul>
             </div>
         </div>
@@ -150,29 +190,25 @@
             <div class="tips-grid">
                 <div class="tip-item">
                     <i class="fa-solid fa-bed tip-icon"></i>
-                    <h4>Sleep at least 7-8 hours</h4>
-                    <p>It is medically proven to be good for your brain, your body, and your energy levels for the next day.</p>
+                    <h4>Sleep 8 hours</h4>
                 </div>
                 <div class="tip-item">
                     <i class="fa-solid fa-calendar-check tip-icon"></i>
                     <h4>Use a Calendar App</h4>
-                    <p>When you work and study at the same time, using Google Calendar is very useful to organize your free time.</p>
                 </div>
                 <div class="tip-item">
                     <i class="fa-solid fa-bottle-water tip-icon"></i>
                     <h4>Stay Hydrated</h4>
-                    <p>Drinking a lot of water is very healthy, especially when you have long days or do physical activities like riding.</p>
                 </div>
                 <div class="tip-item">
                     <i class="fa-solid fa-dumbbell tip-icon"></i>
                     <h4>Exercise regularly</h4>
-                    <p>Riding a motorcycle at a professional circuit requires a lot of physical form, so going to the gym is a great idea.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="goals" class="section">
+    <section id="goals" class="section dark-section">
         <div class="section-header">
             <h2 class="section-title"><i class="fa-solid fa-bullseye"></i> Professional Goals</h2>
         </div>
@@ -182,22 +218,20 @@
                 <div class="goal-text">
                     <h3>My Dream Job</h3>
                     <p>When I finish my ASIR degree, my main professional goal is to find a job as a <strong>Systems Administrator</strong> or a <strong>Cloud Engineer</strong>. I would love to work for a modern tech company that allows me to <strong>telework (work from home)</strong>.</p>
-                    <p>Working remotely is my dream because it would allow me to be comfortable, manage my own time, and live in my own big house with a huge garage. My ultimate life goal is to fill that garage with all the motorcycles I have ever dreamed of!</p>
+                    <p>Working remotely is my dream because it would allow me to be comfortable, manage my own time, and live in my own big house with a huge garage filled with motorcycles!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="english" class="section dark-section">
+    <section id="english" class="section">
         <div class="section-header">
             <h2 class="section-title"><i class="fa-solid fa-earth-americas"></i> My Experience with English</h2>
         </div>
         <div class="english-content glass-panel">
             <p class="quote">
                 <i class="fa-solid fa-quote-left"></i> 
-                My honest opinion about English is that it is absolutely necessary today. We live in a globalized world. 
-                <br><br>
-                For my professional career, it is essential. In the IT sector (networks, servers, programming), 90% of the documentation, manuals, and software are written in English. If I want to be a good Systems Administrator and work remotely for big companies, I need to improve my English skills. It is also very helpful when I travel or when I watch motorcycle races from around the world.
+                For my professional career, English is essential. In the IT sector, 90% of the documentation, manuals, and software are written in English. If I want to be a good Systems Administrator and work remotely for big companies, I need to improve my English skills. It is also very helpful when I travel or watch international motorcycle races.
                 <i class="fa-solid fa-quote-right"></i>
             </p>
         </div>
@@ -205,7 +239,7 @@
 
     <footer>
         <p>&copy; 2024 Borja Lara Sánchez. Developed for ASIR.</p>
-        <a href="#personal" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
+        <a href="#personal" class="back-to-top nav-item"><i class="fa-solid fa-arrow-up"></i></a>
     </footer>
 
     <script src="script.js"></script>
