@@ -138,3 +138,17 @@ for(let i=0; i<40; i++) {
     }
     canvasContainer.appendChild(p);
 }
+
+// Preloader Logic
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if(preloader) {
+        setTimeout(() => {
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.visibility = 'hidden';
+                preloader.style.display = 'none';
+            }, 1000);
+        }, 2500);
+    }
+});

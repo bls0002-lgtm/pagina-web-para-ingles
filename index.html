@@ -9,10 +9,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <i class="fa-solid fa-server fa-bounce" style="font-size: 4rem; color: var(--primary-color);"></i>
+            <h2 style="margin-top: 1rem; color: #fff;">Booting System...</h2>
+            <div class="loading-bar"><div class="loading-progress"></div></div>
+        </div>
+    </div>
+
     <!-- Sound Effects -->
     <audio id="hoverSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" preload="auto"></audio>
     <audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3" preload="auto"></audio>
     <audio id="motoSound" src="https://assets.mixkit.co/active_storage/sfx/1545/1545-preview.mp3" preload="auto"></audio>
+
+    <!-- Floating Spotify Player -->
+    <div class="floating-player custom-glass" id="music-player">
+        <div class="player-icon"><i class="fa-brands fa-spotify"></i></div>
+        <div class="player-info">
+            <span class="song">My Driving Playlist</span>
+            <span class="artist">Spotify</span>
+        </div>
+        <a href="https://open.spotify.com/playlist/37i9dQZF1DX4wta20PHgwo" target="_blank" class="play-btn nav-item"><i class="fa-solid fa-play"></i></a>
+    </div>
 
     <div id="particles-background"></div>
     <div class="cursor"></div>
@@ -27,20 +46,17 @@
             <li><a href="#routine" class="nav-item"><i class="fa-solid fa-clock"></i> Routine</a></li>
             <li><a href="#goals" class="nav-item"><i class="fa-solid fa-rocket"></i> Goals</a></li>
         </ul>
-        <!-- Theme Toggle -->
-        <button id="theme-toggle" class="theme-btn nav-item">
-            <i class="fa-solid fa-sun" id="theme-icon"></i>
-        </button>
-        <!-- Mobile Menu Icon -->
+        <button id="theme-toggle" class="theme-btn nav-item"><i class="fa-solid fa-sun" id="theme-icon"></i></button>
         <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
     </nav>
 
     <header class="hero" id="personal">
-        <div class="glass-panel hero-content">
+        <div class="glass-panel hero-content" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
             <div class="profile-pic-container">
                 <img src="https://images.unsplash.com/photo-1544477051-78c66e2c3e1e?auto=format&fit=crop&q=80&w=300&h=300" alt="My Profile" class="profile-pic">
             </div>
-            <h1>Borja Lara Sánchez</h1>
+            <!-- Glitch Text Effect -->
+            <h1 class="glitch" data-text="Borja Lara Sánchez">Borja Lara Sánchez</h1>
             <div class="typing-container">
                 <span id="typing-text"></span><span class="cursor-blink">|</span>
             </div>
@@ -60,39 +76,26 @@
         </div>
     </header>
 
-    <!-- NEW SECTION: Skills -->
     <section id="skills" class="section">
         <div class="section-header">
             <h2 class="section-title"><i class="fa-solid fa-microchip"></i> My Tech Skills</h2>
             <p class="section-desc">What I am learning in ASIR right now.</p>
         </div>
-        <div class="skills-container glass-panel">
+        <div class="skills-container glass-panel" data-tilt data-tilt-max="3">
             <div class="skill-box">
-                <div class="skill-info">
-                    <span><i class="fa-brands fa-windows"></i> Windows Server</span>
-                    <span>85%</span>
-                </div>
+                <div class="skill-info"><span><i class="fa-brands fa-windows"></i> Windows Server</span><span>85%</span></div>
                 <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
             </div>
             <div class="skill-box">
-                <div class="skill-info">
-                    <span><i class="fa-brands fa-linux"></i> Linux Administration</span>
-                    <span>75%</span>
-                </div>
+                <div class="skill-info"><span><i class="fa-brands fa-linux"></i> Linux Administration</span><span>75%</span></div>
                 <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
             </div>
             <div class="skill-box">
-                <div class="skill-info">
-                    <span><i class="fa-solid fa-network-wired"></i> Computer Networks</span>
-                    <span>80%</span>
-                </div>
+                <div class="skill-info"><span><i class="fa-solid fa-network-wired"></i> Computer Networks</span><span>80%</span></div>
                 <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
             </div>
             <div class="skill-box">
-                <div class="skill-info">
-                    <span><i class="fa-solid fa-memory"></i> Hardware & Assembly</span>
-                    <span>95%</span>
-                </div>
+                <div class="skill-info"><span><i class="fa-solid fa-memory"></i> Hardware & Assembly</span><span>95%</span></div>
                 <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
             </div>
         </div>
@@ -101,12 +104,10 @@
     <section id="hobbies" class="section dark-section">
         <div class="section-header">
             <h2 class="section-title"><i class="fa-solid fa-heart"></i> Likes & Dislikes</h2>
-            <p class="section-desc">What makes me tick when I'm not studying.</p>
         </div>
         
         <div class="media-grid">
-            <!-- Hobby 1: Motos con Galería Carrusel -->
-            <div class="media-card" id="moto-card">
+            <div class="media-card" data-tilt data-tilt-max="10">
                 <div class="carousel">
                     <div class="carousel-inner">
                         <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&h=400" alt="Moto 1">
@@ -115,27 +116,27 @@
                     </div>
                     <div class="overlay"><i class="fa-solid fa-motorcycle"></i></div>
                 </div>
-                <h3><i class="fa-solid fa-flag-checkered"></i> Motorcycles & Track Days</h3>
-                <p>My biggest passion in life is motorcycles. I really love speed and adrenaline. When I have free time, I go to the racing circuit to ride my bike.</p>
+                <h3><i class="fa-solid fa-flag-checkered"></i> Motorcycles</h3>
+                <p>My biggest passion in life is motorcycles. I really love speed and adrenaline. When I have free time, I go to the racing circuit.</p>
                 <button class="btn btn-glow nav-item" id="play-moto-btn"><i class="fa-solid fa-volume-high"></i> Engine Sound</button>
             </div>
             
-            <div class="media-card">
+            <div class="media-card" data-tilt data-tilt-max="10">
                 <div class="card-image-wrapper">
                     <img src="https://images.unsplash.com/photo-1511632765486-a01c80cb8704?auto=format&fit=crop&w=600&h=400" alt="Family and Friends">
                     <div class="overlay"><i class="fa-solid fa-users"></i></div>
                 </div>
                 <h3><i class="fa-solid fa-user-group"></i> Family & Friends</h3>
-                <p>I enjoy spending my free time outside. I love doing activities with my girlfriend and my stepson, and going on routes through the mountains with my friends.</p>
+                <p>I enjoy spending my free time outside. I love doing activities with my girlfriend and my stepson, and going on routes with friends.</p>
             </div>
 
-            <div class="media-card">
+            <div class="media-card" data-tilt data-tilt-max="10">
                 <div class="card-image-wrapper">
                     <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=600&h=400" alt="No Videogames" style="filter: grayscale(100%);">
                     <div class="overlay"><i class="fa-solid fa-thumbs-down"></i></div>
                 </div>
                 <h3><i class="fa-solid fa-gamepad"></i> Dislikes: Video Games</h3>
-                <p>Unlike many people my age, I absolutely hate video games. I don't like staying at home staring at a TV. Real life experiences are much better.</p>
+                <p>Unlike many people my age, I absolutely hate video games. I don't like staying at home staring at a TV. Real life is much better.</p>
             </div>
         </div>
     </section>
@@ -146,64 +147,29 @@
         </div>
         
         <div class="routine-container">
-            <div class="routine-card custom-glass timeline-card">
+            <div class="routine-card custom-glass timeline-card" data-tilt data-tilt-max="5">
                 <h3><i class="fa-solid fa-sun"></i> Typical Weekday</h3>
                 <ul class="timeline">
-                    <li>
-                        <span class="time">06:00 AM</span>
-                        <p>I wake up very early to get ready and go to the high school.</p>
-                    </li>
-                    <li>
-                        <span class="time">03:00 PM</span>
-                        <p>I finish my ASIR classes and go back home to eat quickly.</p>
-                    </li>
-                    <li>
-                        <span class="time">04:00 PM</span>
-                        <p>I start working. My job takes most of my afternoon and evening.</p>
-                    </li>
-                    <li>
-                        <span class="time">10:00 PM</span>
-                        <p>I finish work and arrive home at 11:00 PM to take a shower and sleep.</p>
-                    </li>
+                    <li><span class="time">06:00 AM</span><p>I wake up very early to get ready and go to the high school.</p></li>
+                    <li><span class="time">03:00 PM</span><p>I finish my ASIR classes and go back home to eat quickly.</p></li>
+                    <li><span class="time">04:00 PM</span><p>I start working. My job takes most of my afternoon and evening.</p></li>
+                    <li><span class="time">10:00 PM</span><p>I finish work and arrive home at 11:00 PM to take a shower and sleep.</p></li>
                 </ul>
             </div>
 
-            <div class="routine-card custom-glass">
+            <div class="routine-card custom-glass" data-tilt data-tilt-max="5">
                 <div class="card-icon"><i class="fa-solid fa-mug-hot"></i></div>
                 <h3>My Weekend Routine</h3>
-                <p>Saturdays and Sundays are my days to disconnect. I wake up late because I am tired from the week. I spend the whole day with my girlfriend, my stepson, or riding my motorcycle on the road with my friends.</p>
+                <p>Saturdays and Sundays are my days to disconnect. I spend the whole day with my family or riding my motorcycle on the road.</p>
             </div>
 
-            <div class="routine-card custom-glass habits-card">
+            <div class="routine-card custom-glass habits-card" data-tilt data-tilt-max="5">
                 <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
                 <h3>My Habits</h3>
                 <ul>
                     <li><span class="habit-badge start"><i class="fa-solid fa-play"></i> Start</span> <strong>Eating healthier:</strong> I want to start a better diet.</li>
                     <li><span class="habit-badge stop"><i class="fa-solid fa-stop"></i> Stop</span> <strong>Sleeping late:</strong> I want to stop sleeping only 5 hours.</li>
-                    <li><span class="habit-badge keep"><i class="fa-solid fa-pause"></i> Keep</span> <strong>Riding bikes:</strong> I want to keep going to the circuit.</li>
                 </ul>
-            </div>
-        </div>
-
-        <div class="tips-container custom-glass">
-            <h3><i class="fa-solid fa-lightbulb"></i> 4 Tips to Improve a Routine</h3>
-            <div class="tips-grid">
-                <div class="tip-item">
-                    <i class="fa-solid fa-bed tip-icon"></i>
-                    <h4>Sleep 8 hours</h4>
-                </div>
-                <div class="tip-item">
-                    <i class="fa-solid fa-calendar-check tip-icon"></i>
-                    <h4>Use a Calendar App</h4>
-                </div>
-                <div class="tip-item">
-                    <i class="fa-solid fa-bottle-water tip-icon"></i>
-                    <h4>Stay Hydrated</h4>
-                </div>
-                <div class="tip-item">
-                    <i class="fa-solid fa-dumbbell tip-icon"></i>
-                    <h4>Exercise regularly</h4>
-                </div>
             </div>
         </div>
     </section>
@@ -212,7 +178,7 @@
         <div class="section-header">
             <h2 class="section-title"><i class="fa-solid fa-bullseye"></i> Professional Goals</h2>
         </div>
-        <div class="goals-content glass-panel animated-border">
+        <div class="goals-content glass-panel animated-border" data-tilt data-tilt-max="2">
             <div class="goal-highlight">
                 <i class="fa-solid fa-laptop-house"></i>
                 <div class="goal-text">
@@ -228,10 +194,10 @@
         <div class="section-header">
             <h2 class="section-title"><i class="fa-solid fa-earth-americas"></i> My Experience with English</h2>
         </div>
-        <div class="english-content glass-panel">
+        <div class="english-content glass-panel" data-tilt data-tilt-max="2">
             <p class="quote">
                 <i class="fa-solid fa-quote-left"></i> 
-                For my professional career, English is essential. In the IT sector, 90% of the documentation, manuals, and software are written in English. If I want to be a good Systems Administrator and work remotely for big companies, I need to improve my English skills. It is also very helpful when I travel or watch international motorcycle races.
+                For my professional career, English is essential. In the IT sector, 90% of the documentation, manuals, and software are written in English. If I want to be a good Systems Administrator and work remotely for big companies, I need to improve my English skills.
                 <i class="fa-solid fa-quote-right"></i>
             </p>
         </div>
@@ -242,6 +208,9 @@
         <a href="#personal" class="back-to-top nav-item"><i class="fa-solid fa-arrow-up"></i></a>
     </footer>
 
+    <!-- Scripts -->
+    <!-- Vanilla Tilt for 3D card effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
