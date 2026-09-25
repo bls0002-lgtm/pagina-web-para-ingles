@@ -194,3 +194,37 @@ body {
     .racing-title { font-size: 4rem; }
     .goal-highlight { flex-direction: column; }
 }
+
+/* SPECIFIC STYLES FOR NEW SECTIONS (Append to existing CSS structure) */
+
+/* Contact Form */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-left: 4px solid var(--secondary-color);
+}
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; color: var(--primary-color); font-size: 1.2rem; letter-spacing: 1px;}
+.form-group input, .form-group textarea {
+    width: 100%; padding: 1rem;
+    background: rgba(0,0,0,0.5); border: 1px solid #444;
+    color: #fff; font-family: 'Roboto', sans-serif;
+    border-radius: 4px; transition: border-color 0.3s;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none; border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 42, 0, 0.2);
+}
+
+/* Garage Specs List */
+.specs-list {
+    list-style: none; padding: 0; margin-top: 1rem; border-top: 1px solid #333; padding-top: 1rem;
+}
+.specs-list li {
+    margin-bottom: 0.5rem; color: #ccc; font-size: 0.95rem; display: flex; align-items: center;
+}
+.specs-list li i {
+    color: #fff; margin-right: 10px; width: 20px; text-align: center;
+}
+.garage-card:hover .specs-list li i { color: var(--primary-color); }

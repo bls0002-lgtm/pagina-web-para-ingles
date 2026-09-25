@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Borja Lara | ASIR & Rider</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Racing Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Engine Preloader -->
     <div id="preloader">
         <div class="loader-content">
             <i class="fa-solid fa-motorcycle fa-fade" style="font-size: 5rem; color: var(--primary-color);"></i>
@@ -19,12 +17,10 @@
         </div>
     </div>
 
-    <!-- Sound Effects -->
     <audio id="hoverSound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" preload="auto"></audio>
     <audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3" preload="auto"></audio>
     <audio id="motoSound" src="https://assets.mixkit.co/active_storage/sfx/1545/1545-preview.mp3" preload="auto"></audio>
 
-    <!-- Floating Spotify Player -->
     <div class="floating-player custom-glass" id="music-player">
         <div class="player-icon"><i class="fa-brands fa-spotify"></i></div>
         <div class="player-info">
@@ -34,23 +30,24 @@
         <a href="https://open.spotify.com/playlist/37i9dQZF1DX4wta20PHgwo" target="_blank" class="play-btn nav-item"><i class="fa-solid fa-play"></i></a>
     </div>
 
-    <!-- Asphalt Background Pattern -->
     <div class="asphalt-bg"></div>
 
     <nav class="navbar">
         <div class="logo racing-text"><i class="fa-solid fa-helmet-safety"></i> BORJA.DEV</div>
         <ul class="nav-links">
-            <li><a href="#personal" class="nav-item"><i class="fa-solid fa-user"></i> Me</a></li>
-            <li><a href="#skills" class="nav-item"><i class="fa-solid fa-wrench"></i> Skills</a></li>
-            <li><a href="#hobbies" class="nav-item"><i class="fa-solid fa-motorcycle"></i> Passion</a></li>
-            <li><a href="#routine" class="nav-item"><i class="fa-solid fa-stopwatch"></i> Routine</a></li>
-            <li><a href="#goals" class="nav-item"><i class="fa-solid fa-flag-checkered"></i> Goals</a></li>
+            <li><a href="#personal" class="nav-item">Me</a></li>
+            <li><a href="#skills" class="nav-item">Skills</a></li>
+            <li><a href="#projects" class="nav-item">Projects</a></li>
+            <li><a href="#hobbies" class="nav-item">Passion</a></li>
+            <li><a href="#garage" class="nav-item">Garage</a></li>
+            <li><a href="#routine" class="nav-item">Routine</a></li>
+            <li><a href="#contact" class="nav-item">Contact</a></li>
         </ul>
         <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
     </nav>
 
     <header class="hero" id="personal">
-        <div class="hero-content" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2">
+        <div class="hero-content" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.1">
             <div class="profile-pic-container">
                 <img src="https://images.unsplash.com/photo-1544477051-78c66e2c3e1e?auto=format&fit=crop&q=80&w=300&h=300" alt="My Profile" class="profile-pic">
             </div>
@@ -62,9 +59,9 @@
             
             <div class="intro-box custom-glass">
                 <p class="intro-text">
-                    Hey! I'm Borja, an 18-year-old from Spain. I'm currently studying Network and Systems Administration (ASIR). But when I'm not dealing with servers and cables, I'm out riding.
+                    Hey! I'm Borja, an 18-year-old from Spain studying Network and Systems Administration (ASIR). When I'm not dealing with servers, cables, and routers, I'm out riding.
                     <br><br>
-                    I can't stand sitting at home playing video games all day. I need real action, roaring engines, asphalt, and spending good time with my girlfriend, my stepson, and my friends.
+                    I can't stand sitting at home playing video games all day. I need real action, roaring engines, asphalt, and spending quality time with my girlfriend, my stepson, and my crew.
                 </p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/motogp/" target="_blank" class="social-btn nav-item"><i class="fa-brands fa-instagram"></i></a>
@@ -80,7 +77,7 @@
         <div class="section-header">
             <h2 class="section-title racing-text"><i class="fa-solid fa-toolbox"></i> MY TOOLBOX (ASIR)</h2>
         </div>
-        <div class="skills-container glass-panel" data-tilt data-tilt-max="3">
+        <div class="skills-container glass-panel" data-tilt data-tilt-max="2">
             <div class="skill-box">
                 <div class="skill-info"><span><i class="fa-brands fa-windows"></i> Windows Server</span><span class="racing-text">85%</span></div>
                 <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
@@ -90,7 +87,7 @@
                 <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
             </div>
             <div class="skill-box">
-                <div class="skill-info"><span><i class="fa-solid fa-network-wired"></i> Networks</span><span class="racing-text">80%</span></div>
+                <div class="skill-info"><span><i class="fa-solid fa-network-wired"></i> Networks & Routing</span><span class="racing-text">80%</span></div>
                 <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
             </div>
             <div class="skill-box">
@@ -100,13 +97,37 @@
         </div>
     </section>
 
-    <section id="hobbies" class="section dark-section">
+    <!-- NEW SECTION: PROJECTS -->
+    <section id="projects" class="section dark-section">
+        <div class="section-header">
+            <h2 class="section-title racing-text"><i class="fa-solid fa-server"></i> CURRENT LAB PROJECTS</h2>
+            <p style="color:#aaa; text-align:center;">What I am building in my ASIR classes.</p>
+        </div>
+        <div class="media-grid">
+            <div class="media-card" data-tilt data-tilt-max="5">
+                <div class="card-icon"><i class="fa-brands fa-windows"></i></div>
+                <h3 class="racing-text">Active Directory Setup</h3>
+                <p>Configuring a full Windows Server environment with Active Directory, DNS, and DHCP for a simulated company network.</p>
+            </div>
+            <div class="media-card" data-tilt data-tilt-max="5">
+                <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3 class="racing-text">Linux Firewall</h3>
+                <p>Setting up iptables and secure SSH access on an Ubuntu Server to protect the internal network from external attacks.</p>
+            </div>
+            <div class="media-card" data-tilt data-tilt-max="5">
+                <div class="card-icon"><i class="fa-solid fa-ethernet"></i></div>
+                <h3 class="racing-text">Cisco Packet Tracer</h3>
+                <p>Designing complex network topologies, VLANs, and OSPF routing protocols for enterprise-level communication.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="hobbies" class="section">
         <div class="section-header">
             <h2 class="section-title racing-text"><i class="fa-solid fa-fire-flame-curved"></i> REAL PASSIONS</h2>
         </div>
-        
         <div class="media-grid">
-            <div class="media-card" data-tilt data-tilt-max="10">
+            <div class="media-card" data-tilt data-tilt-max="5">
                 <div class="carousel">
                     <div class="carousel-inner">
                         <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=600&h=400" alt="Moto 1">
@@ -117,19 +138,19 @@
                 </div>
                 <h3 class="racing-text"><i class="fa-solid fa-flag-checkered"></i> MOTORCYCLES</h3>
                 <p>My absolute passion. Speed, adrenaline, and pushing the limits on the track. Nothing beats the feeling of a track day.</p>
-                <button class="btn btn-racing nav-item" id="play-moto-btn"><i class="fa-solid fa-volume-high"></i> Rev the Engine</button>
+                <button class="btn btn-racing nav-item" id="play-moto-btn" style="width: 100%;"><i class="fa-solid fa-volume-high"></i> Rev the Engine</button>
             </div>
             
-            <div class="media-card" data-tilt data-tilt-max="10">
+            <div class="media-card" data-tilt data-tilt-max="5">
                 <div class="card-image-wrapper">
                     <img src="https://images.unsplash.com/photo-1511632765486-a01c80cb8704?auto=format&fit=crop&w=600&h=400" alt="Family">
                     <div class="overlay"><i class="fa-solid fa-users"></i></div>
                 </div>
                 <h3 class="racing-text"><i class="fa-solid fa-user-group"></i> CREW & FAMILY</h3>
-                <p>I love spending time outside. Doing activities with my girlfriend, my stepson, and going on mountain routes with my friends.</p>
+                <p>Doing activities with my girlfriend, my stepson, and going on mountain routes with my friends is the best weekend plan.</p>
             </div>
 
-            <div class="media-card" data-tilt data-tilt-max="10">
+            <div class="media-card" data-tilt data-tilt-max="5">
                 <div class="card-image-wrapper">
                     <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=600&h=400" alt="No Videogames" style="filter: grayscale(100%) contrast(1.2);">
                     <div class="overlay"><i class="fa-solid fa-ban"></i></div>
@@ -140,13 +161,58 @@
         </div>
     </section>
 
+    <!-- NEW SECTION: GARAGE -->
+    <section id="garage" class="section dark-section">
+        <div class="section-header">
+            <h2 class="section-title racing-text"><i class="fa-solid fa-warehouse"></i> MY DREAM GARAGE</h2>
+            <p style="color:#aaa; text-align:center;">The machines I want to fill my house with when I'm a SysAdmin.</p>
+        </div>
+        <div class="media-grid">
+            <!-- Bike 1 -->
+            <div class="media-card garage-card" data-tilt data-tilt-max="8">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1599818820490-9f5b61b2ed1e?auto=format&fit=crop&w=600&h=400" alt="Ducati">
+                </div>
+                <h3 class="racing-text" style="color: #ff2a00;">DUCATI PANIGALE V4</h3>
+                <ul class="specs-list">
+                    <li><i class="fa-solid fa-gauge-high"></i> Top Speed: 299 km/h</li>
+                    <li><i class="fa-solid fa-horse-head"></i> Power: 214 HP</li>
+                    <li><i class="fa-solid fa-weight-hanging"></i> Weight: 175 kg</li>
+                </ul>
+            </div>
+            <!-- Bike 2 -->
+            <div class="media-card garage-card" data-tilt data-tilt-max="8">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=600&h=400" alt="Yamaha R1">
+                </div>
+                <h3 class="racing-text" style="color: #0044ff;">YAMAHA YZF-R1</h3>
+                <ul class="specs-list">
+                    <li><i class="fa-solid fa-gauge-high"></i> Top Speed: 293 km/h</li>
+                    <li><i class="fa-solid fa-horse-head"></i> Power: 200 HP</li>
+                    <li><i class="fa-solid fa-weight-hanging"></i> Weight: 201 kg</li>
+                </ul>
+            </div>
+            <!-- Bike 3 -->
+            <div class="media-card garage-card" data-tilt data-tilt-max="8">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=600&h=400" alt="Kawasaki Ninja">
+                </div>
+                <h3 class="racing-text" style="color: #00ff00;">KAWASAKI NINJA ZX-10R</h3>
+                <ul class="specs-list">
+                    <li><i class="fa-solid fa-gauge-high"></i> Top Speed: 299 km/h</li>
+                    <li><i class="fa-solid fa-horse-head"></i> Power: 203 HP</li>
+                    <li><i class="fa-solid fa-weight-hanging"></i> Weight: 206 kg</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <section id="routine" class="section">
         <div class="section-header">
             <h2 class="section-title racing-text"><i class="fa-solid fa-stopwatch"></i> DAILY LAPS (ROUTINE)</h2>
         </div>
-        
         <div class="routine-container">
-            <div class="routine-card custom-glass timeline-card" data-tilt data-tilt-max="5">
+            <div class="routine-card custom-glass timeline-card" data-tilt data-tilt-max="3">
                 <h3 class="racing-text"><i class="fa-solid fa-sun"></i> WEEKDAY RACE</h3>
                 <ul class="timeline">
                     <li><span class="time">06:00 AM</span><p>Wake up early for ASIR classes.</p></li>
@@ -156,10 +222,13 @@
                 </ul>
             </div>
 
-            <div class="routine-card custom-glass" data-tilt data-tilt-max="5">
+            <div class="routine-card custom-glass" data-tilt data-tilt-max="3">
                 <div class="card-icon"><i class="fa-solid fa-road"></i></div>
                 <h3 class="racing-text">WEEKEND PIT STOP</h3>
                 <p>Saturdays and Sundays are my days to disconnect from the stress. I spend the day with my family or riding my bike on the road to clear my mind.</p>
+                <div class="card-icon" style="margin-top:2rem;"><i class="fa-solid fa-burger"></i></div>
+                <h3 class="racing-text">CURRENT HABITS</h3>
+                <p>I am trying to stop sleeping only 5 hours and start eating healthier because my daily routine is very fast-paced.</p>
             </div>
         </div>
     </section>
@@ -190,6 +259,31 @@
                 English is absolutely necessary. In the IT world, all the manuals, servers, and software are in English. If I want to be a top SysAdmin and work remotely, I need it. Plus, it helps a lot when watching international motorcycle racing broadcasts.
                 <i class="fa-solid fa-quote-right" style="color: var(--primary-color);"></i>
             </p>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: CONTACT -->
+    <section id="contact" class="section dark-section">
+        <div class="section-header">
+            <h2 class="section-title racing-text"><i class="fa-solid fa-envelope"></i> PIT STOP (CONTACT)</h2>
+            <p style="color:#aaa;">Want to talk about servers or ride together? Drop a message.</p>
+        </div>
+        <div class="contact-container custom-glass" data-tilt data-tilt-max="2">
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent to Borja! (Simulated)');">
+                <div class="form-group">
+                    <label class="racing-text">YOUR NAME</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label class="racing-text">YOUR EMAIL</label>
+                    <input type="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="racing-text">MESSAGE</label>
+                    <textarea rows="4" placeholder="Let's ride..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-racing nav-item" style="width: 100%;"><i class="fa-solid fa-paper-plane"></i> SEND TRANSMISSION</button>
+            </form>
         </div>
     </section>
 
